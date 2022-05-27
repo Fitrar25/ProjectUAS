@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/1016.jpg">
    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Upload Gambar</title>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+    <title>Profil</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #EB0000; font-size: larger;">
@@ -36,42 +39,33 @@
           </div>
         </div>
       </nav> 
-      <br>
-      <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><center>Info</center></h1>
-      <br>
-      <br>
-      <div class="row">
-          <div class="col"></div>
-        <div class="col-lg-5 col-md-5 col-xs-6 thumb">
-            <div class="text-center">
-            <a class="thumbnail" href="#">
-                <img class="img-fluid" src="images/pmi.jpg" alt="">
-            </a>
-            </div>
-         </div>
-         <div class="col"></div>
 
-         <p>Salah satu kegiatan PMI yang paling dikenal masyarakat adalah donor darah. Menyumbangkan sebagian darah untuk kemudian disalurkan kepada yang membutuhkan menjadi suatu sumbangan berarti dalam kehidupan sosial bermasyarakat. Tidak membutuhkan persyaratan sulit untuk menjadi calon donor. <br><br>
-         <strong> Syarat Untuk Menjadi Donor Darah : </strong><br>
-        Donor darah adalah orang yang memberikan darah secara sukarela untuk maksud dan tujuan transfusi darah bagi orang lain yang membutuhkan. Semua orang dapat menjadi donor darah jika memenuhi persyaratan yang berlaku. 
-        <br>
-        <strong>SYARAT SYARAT UNTUK MENJADI DONOR DARAH ?</strong><br>
-        <ol>
-        <li>jasmani dan rohani</li>
-        <li>Usia 17 sampai dengan 65 tahun.</li>
-        <li>Berat badan minimal 45 kg.</li>
-        <li>Tekanan darah normal</li>
-        <li>Kadar haemoglobin 12,5g% s/d 17,0g%</li>
-        <li>Interval donor minimal 12 minggu atau 3 bulan sejak donor darah sebelumnya (maksimal 5 kali dalam 2 tahun)</li>
-        </ol></p>
-        <br>
-        <h3>AYO SUKSESKAN KEGIATAN DONOR DARAH!</h3>
-      <footer>
-        <center>
-          <br>
-          <strong>@Donordarah 2022</strong>
-        </center>
-      </footer>
+    <canvas id="myChart" style="width:100%;max-width:700px">
+        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues = [55, 49, 44, 24, 15];
+        var barColors = ["red", "green","blue","orange","brown"];
+        
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {...}
+        });
+    </canvas>
+      
+    <div style="bottom:0; width:100%;">
+        <br><br><Br><Br>
+        <footer class="text-center">
+            <div class="text-center p-3" style="background-color:gray">
+              @Donor Darah, 2022
+            </div>
+          </footer>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 
